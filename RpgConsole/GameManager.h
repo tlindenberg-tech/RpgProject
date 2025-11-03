@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include <memory>
+#include "PlayerManager.h"
+#include "EnemyManager.h"
+#include "FightManager.h"
 
-#include "Warrior.h"
-#include "Mage.h"
-#include "Enemy.h"
 using namespace std;
 class GameManager
 {
@@ -18,12 +18,14 @@ private:
     };
     bool isRunning;
     GameState state;
-    std::unique_ptr<Player> player;
+	PlayerManager playerManager;
+	EnemyManager enemyManager;
+	FightManager fightManager;
+
 public:
-    GameManager() {};
+    GameManager() : isRunning(false){};
     ~GameManager() {};
 	void StartGame();
-    void ChooseClass();
     void Initialize();
     void ShowMenu();
     void Combat();

@@ -3,16 +3,19 @@
 void Player::LevelUp() {
 	lvl++;
 	exp -= expRequire;
+	expRequire *= 1.2;
 	damage *= 1.2;
+	cout << "Vous augmentez d'un niveau." << endl;
+	cout << "Vous etes maintenant niveau " << lvl << endl << endl;
 }
 
-//void Player::TakeXp(Enemy& target) {
-//	exp += target.GetXp();
-//	if (exp > expRequire) {
-//		LevelUp();
-//	}
-//
-//}
+void Player::TakeXp(int xpEnemy) {
+	exp += xpEnemy;
+	if (exp > expRequire) {
+		LevelUp();
+	}
+
+}
 
 int Player::GetLevel() const {
 	return lvl;

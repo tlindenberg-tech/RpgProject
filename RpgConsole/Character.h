@@ -19,9 +19,10 @@ public:
 	int GetPvMax() const;
 	int GetDamage() const;
 	bool IsAlive() const;
+	void Heal(int heal);
 
 	virtual void Attack(Character& c);
-	void SetPv(Character& c) const;
+	void TakeDamage(int damage);
 	virtual ~Character() {};
 
 };

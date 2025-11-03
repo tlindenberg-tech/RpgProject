@@ -6,36 +6,73 @@ void GameManager::Initialize() {
     state = GameState::Menu;
 }
 
-void GameManager::ChooseClass() {
-    int chooseClass;
-    string name;
-    cout << "Entrez le nom de votre personnage : " << endl;
-    cin >> name;
-    cout << "Choississez votre classe : " << endl;
-    cout << "1 Guerrier" << endl;
-    cout << "2 Mage" << endl;
-    cin >> chooseClass;
+void GameManager::StartGame() {
+    ShowMenu();
+    Enemy enemy;
 
-    switch (chooseClass)
-    {
+    while (isRunning) {
+        switch (state) {
+        case GameState::Menu:
+            ShowMenu();
+            break;
+        case GameState::Combat:
+            //Combat();
+            break;
+        case GameState::Victory:
+            std::cout << "Vous avez gagné le combat!\n";
+            state = GameState::Menu;
+            break;
+        case GameState::Defeat:
+            std::cout << "Vous avez perdu le combat...\n";
+            isRunning = false;
+            break;
+        case GameState::Quit:
+            isRunning = false;
+            break;
+        }
+    }
+}
+
+void GameManager::ShowMenu() {
+    int choice;
+    std::cout << "\n=== Menu Principal ===\n";
+    std::cout << "1. Nouvelle partie\n";
+    std::cout << "2. Quitter le jeu\n";
+    std::cout << "Choisissez une option: ";
+    std::cin >> choice;
+    switch (choice) {
     case 1:
-        cout << "Vous avez choisi la classe Guerrier." << endl;
-        player = make_unique<Warrior>(name);
-        player->DisplayStats();
+        state = GameState::Combat;
         break;
     case 2:
-        cout << "Vous avez choisi la classe Mage." << endl;
-        player = make_unique<Mage>(name);
-        player->DisplayStats();
+        state = GameState::Quit;
         break;
     default:
-        cout << "Classe invalide." << endl;
+        std::cout << "Option invalide. Veuillez réessayer.\n";
         break;
     }
 }
 
+//void GameManager::Combat() {
+//    std::cout << "\n=== Combat Commencé ===\n";
+//    Enemy enemy;
+//    std::cout << "Un " << enemy.GetName() << " apparaît!\n";
+//    while (playerManager.GetPlayer()->IsAlive() && enemy.IsAlive()) {
+//        playerManager.GetPlayer()->Attack(enemy);
+//        if (enemy.IsAlive()) {
+//            enemy.Attack(*playerManager.GetPlayer());
+//        }
+//    }
+//    if (playerManager.GetPlayer()->IsAlive()) {
+//        state = GameState::Victory;
+//    } else {
+//        state = GameState::Defeat;
+//    }
+//}
+//
+//
+//
 void GameManager::Shutdown() {
     std::cout << "\n=== Fin du jeu ===\n";
-    player.reset();
 }
 

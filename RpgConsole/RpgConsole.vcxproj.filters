@@ -51,7 +51,7 @@
     <ClInclude Include="FightManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="CharacterManager.h">
+    <ClInclude Include="EnemyManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
@@ -65,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="Mage.h">
       <Filter>Fichiers d%27en-tête\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +104,10 @@
     <ClCompile Include="Mage.cpp">
       <Filter>Fichiers sources\Character</Filter>
     </ClCompile>
-    <ClCompile Include="CharacterManager.cpp">
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>Fichiers sources\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
   </ItemGroup>

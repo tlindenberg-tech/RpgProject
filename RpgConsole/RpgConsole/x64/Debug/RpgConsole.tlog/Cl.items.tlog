@@ -1,9 +1,10 @@
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Cell.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Cell.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Character.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Character.obj
-C:\Users\linde\source\repos\RpgProject\RpgConsole\CharacterManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\CharacterManager.obj
+C:\Users\linde\source\repos\RpgProject\RpgConsole\EnemyManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\EnemyManager.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Enemy.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Enemy.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\GameManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\GameManager.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Mage.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Mage.obj
+C:\Users\linde\source\repos\RpgProject\RpgConsole\PlayerManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\PlayerManager.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Warrior.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Warrior.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\InputManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\InputManager.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\main.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\main.obj

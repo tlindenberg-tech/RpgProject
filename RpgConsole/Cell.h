@@ -9,21 +9,13 @@ private:
 	bool isEnemy;
 
 public:
-	Cell();
-	~Cell();
-	void Initialize();
-	char getSymboll(const Cell* cell);
+	Cell() : isEnemy(false) {};
+	~Cell() {};
+
+	char getSymboll() const ;
 
 
 };
-
-Cell::Cell()
-{
-}
-
-Cell::~Cell()
-{
-}
 
 
 
