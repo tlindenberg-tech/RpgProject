@@ -3,12 +3,19 @@
 class Player :
     public Character
 {
-private:
-	int lvl;
 	int exp;
 	int expRequire;
+	int lvl;
 public:
-	Player() {};
-	~Player() {};
+	Player(string name, int pv, int pvMax, int damage) : Character(name, pv, pvMax, damage), exp(0), expRequire(100), lvl(1) {}
+	int GetLevel() const;
+	void LevelUp();
+	//void TakeXp(Enemy& target);
+	int GetXp() const;
+	void DisplayStats() const override;
+	int GetXpRequire() const;
+
+	~Player() override {};
+
 };
 

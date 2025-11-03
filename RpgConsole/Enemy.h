@@ -1,7 +1,10 @@
 #pragma once
-#include "Player.h"
+#include "Character.h"
 class Enemy :
-    public Player
+    public Character
 {
+	Enemy() : Character("Gobelin", 60, 60, 10) {};
+	void Attack(Character& c) override;
+	~Enemy() override {};
 };
 

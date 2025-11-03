@@ -25,6 +25,12 @@
     <Filter Include="Fichiers d%27en-tête\Manager">
       <UniqueIdentifier>{df3db82d-7309-4de5-bc4f-2bff442d91c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map">
+      <UniqueIdentifier>{970d88c1-d7dd-43d2-a106-f39e1554a30c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map">
+      <UniqueIdentifier>{c7325d82-b619-40a3-b429-c9d13f81b32f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -33,7 +39,7 @@
     <ClInclude Include="Enemy.h">
       <Filter>Fichiers d%27en-tête\Character</Filter>
     </ClInclude>
-    <ClInclude Include="Hero.h">
+    <ClInclude Include="Warrior.h">
       <Filter>Fichiers d%27en-tête\Character</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
@@ -42,13 +48,22 @@
     <ClInclude Include="InputManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="TurnManager.h">
+    <ClInclude Include="FightManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
     <ClInclude Include="CharacterManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Mage.h">
       <Filter>Fichiers d%27en-tête\Character</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,7 +77,7 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Fichiers sources\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Hero.cpp">
+    <ClCompile Include="Warrior.cpp">
       <Filter>Fichiers sources\Character</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
@@ -71,14 +86,23 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="TurnManager.cpp">
+    <ClCompile Include="FightManager.cpp">
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="CharacterManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Mage.cpp">
+      <Filter>Fichiers sources\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterManager.cpp">
+      <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
