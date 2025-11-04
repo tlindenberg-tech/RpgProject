@@ -2,29 +2,30 @@
 #include "GameManager.h"
 
 
-void FightManager::StartFight(Player& player, Enemy& enemy)
+int FightManager::StartFight(Player& player, Enemy& enemy)
 {
 	system("cls");
-	cout << "Le combat commence entre " << player.GetName() << " et " << enemy.GetName() << "!" << endl;
 
+	cout << "Le combat commence entre " << player.GetName() << " et " << enemy.GetName() << "!" << endl;
+	system("pause");
 	while (player.IsAlive() && enemy.IsAlive()) {
 		ChooseAction(player, enemy);
 	}
 	if (player.IsAlive() == false) {
 		cout << "Vous etes mort !";
-		
+		return 2;
 	}
 	if (enemy.IsAlive() == false) {
 		enemy.DisplayStats();
 		cout << "Vous venez de vaincre " << enemy.GetName() << endl;
 		cout << "Vous gagnez " << enemy.GetXp() << "xp" << endl;
 		player.TakeXp(enemy.GetXp());
-		
+		return 1;
 	}
 
 
 	player.DisplayStats();
-
+	return 0;
 }
 
 void FightManager::ChooseAction(Character& player, Character& enemy) {
@@ -39,7 +40,7 @@ void FightManager::ChooseAction(Character& player, Character& enemy) {
 	do {
 		cout << " ----------------------------" << endl;
 		cout << "|Choisissez l action :       |" << endl;
-		cout << "|1. Attaquer Gobelin         |" << endl;
+		cout << "|1. Attaquer " << enemy.GetName() << "       | " << endl;
 		if (player.GetPv() < player.GetPvMax()) {
 			cout << "|2. Regenerer 10pv           | " << endl;
 		}

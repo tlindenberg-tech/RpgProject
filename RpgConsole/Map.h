@@ -25,5 +25,6 @@ public:
 	static int GenerateRandomNumber(int min, int max);
 	int GetRemainingEnemy()const ;
 	Cell& GetHeroCell();
+	void DecrementRemainingEnemy();
 
 };

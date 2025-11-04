@@ -31,4 +31,5 @@ void Cell::PlaceEnemy(){
 
 void Cell::RemoveEnemy() {
 	isEnemy = false;
+	
 }

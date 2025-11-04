@@ -1,5 +1,5 @@
-#include "Player.h"
 #include "Enemy.h"
+#include "Player.h"
 void Player::LevelUp() {
 	lvl++;
 	exp -= expRequire;

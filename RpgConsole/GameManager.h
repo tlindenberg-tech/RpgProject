@@ -28,7 +28,7 @@ public:
 	void StartGame();
     void Initialize();
     void ShowMenu();
-    void Combat();
+    void Combat(Player& player);
     void Shutdown();
 };
 

@@ -12,7 +12,7 @@ public:
 	FightManager() {};
 
 
-	void StartFight(Player& player, Enemy& enemy);
+	int StartFight(Player& player, Enemy& enemy);
 	void ChooseAction(Character& player, Character& enemy);
 
 	~FightManager() {};

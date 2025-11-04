@@ -1,16 +1,18 @@
 #include <iostream>
+#include "conio.h"
 #include "Mage.h"
 #include "Warrior.h"
-#include"GameManager.h"
+#include "GameManager.h"
 #include "Map.h"
-#include "conio.h"
+#include "EnemyManager.h"
 
 using namespace std;
 
 int main() {
-	/*GameManager gameManager;
+	srand(time(NULL));
+	GameManager gameManager;
 	gameManager.Initialize();
-	gameManager.StartGame();*/
+	gameManager.StartGame();
 	
 	/*char c;
 	while (true) {
@@ -25,20 +27,32 @@ int main() {
 	}*/
 	
 
-	Map map;
+	/*Map map;
 	PlayerManager playermanager;
+	int fightState = 0;
 	playermanager.CreatePlayer();
 	system("cls");
-
-	map.DisplayMap();
-	map.MooveHero();
-
-	Enemy enemy;
 	FightManager fight;
-	fight.StartFight(*playermanager.GetPlayer(), enemy);
-	map.GetHeroCell().RemoveEnemy();
-	map.DisplayMap();
-	map.MooveHero();
+	EnemyManager enemyManager;
+
+	while (map.GetRemainingEnemy()>0)
+	{
+		map.DisplayMap();
+		map.MooveHero(); 
+		enemyManager.CreateEnemy();
+		Enemy enemy =  *enemyManager.GetEnemy();
+		int fightState = fight.StartFight(*playermanager.GetPlayer(), enemy);
+		if (fightState == 2) {
+			break;
+		}
+		map.GetHeroCell().RemoveEnemy();
+		map.DecrementRemainingEnemy();
+		if (map.GetRemainingEnemy() == 0) {
+			cout << "Vous avez eradique tous les enemis de la carte !" << endl;
+			cout << "Vous avez gagne la partie !" << endl;
+			break;
+		}
+	}*/
 
 	return 0;
 }

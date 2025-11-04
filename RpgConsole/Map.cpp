@@ -7,6 +7,7 @@ Map::Map()
 	colCount = 8;
 	rowHero = 7;
 	colHero = 3;
+	remainingEnemy = 12;
 	cells = vector<vector<Cell>>(rowCount, vector<Cell>(colCount));
 	//cells[8][8];
 	cells[rowHero][colHero].PlaceHero();
@@ -70,20 +71,20 @@ void Map::MooveHero() {
 			if (colHero > 0) {
 				colHero--;
 			}
-
 			break;
-		
-		
 		}
 		cells[rowHero][colHero].PlaceHero();
 		system("cls");
 		DisplayMap();
-		
 	}
 }
 
 int Map::GetRemainingEnemy()const  {
 	return remainingEnemy;
+}
+
+void Map::DecrementRemainingEnemy() {
+	remainingEnemy--;
 }
 
 int Map::GenerateRandomNumber(int min, int max) {
@@ -92,7 +93,7 @@ int Map::GenerateRandomNumber(int min, int max) {
 
 void Map::RandomEnemy() {
 	int placedEnemy = 0;
-	int totalEnemy = 4;
+	int totalEnemy = 12;
 
 	while (placedEnemy < totalEnemy) {
 		int row = GenerateRandomNumber(0, rowCount);

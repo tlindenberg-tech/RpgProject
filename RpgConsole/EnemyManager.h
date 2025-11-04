@@ -1,8 +1,8 @@
 #pragma once
+#include <iostream>
 #include <vector>
 #include <memory>
 #include "Enemy.h"
-#include <iostream>
 class EnemyManager
 {
 private:
@@ -11,6 +11,8 @@ private:
 	public:
 	EnemyManager() {};
 	void CreateEnemy();
+	std::unique_ptr<Enemy> RandomEnemy();
+	Enemy* GetEnemy();
 	~EnemyManager() {};
 };
 

@@ -1,15 +1,14 @@
 #include "GameManager.h"
-
+#include "Map.h"
 void GameManager::Initialize() {
     std::cout << "=== Initialisation du jeu ===\n";
-    isRunning = true;
+    isRunning = true; 
     state = GameState::Menu;
 }
 
 void GameManager::StartGame() {
     ShowMenu();
     playerManager.CreatePlayer();
-    Enemy enemy;
 
     while (isRunning) {
         switch (state) {
@@ -17,7 +16,7 @@ void GameManager::StartGame() {
             ShowMenu();
             break;
         case GameState::Combat:
-            Combat();
+            Combat(*playerManager.GetPlayer());
             
             break;
         case GameState::Victory:
@@ -55,23 +54,36 @@ void GameManager::ShowMenu() {
     }
 }
 
-void GameManager::Combat() {
+void GameManager::Combat(Player& player) {
     
-    Enemy enemy;
-    fightManager.StartFight(*playerManager.GetPlayer(), enemy);
-    /*std::cout << "\n=== Combat Commencé ===\n";
-    std::cout << "Un " << enemy.GetName() << " apparaît!\n";
-    while (playerManager.GetPlayer()->IsAlive() && enemy.IsAlive()) {
-        playerManager.GetPlayer()->Attack(enemy);
-        if (enemy.IsAlive()) {
-            enemy.Attack(*playerManager.GetPlayer());
-        }
-    }*/
-    if (playerManager.GetPlayer()->IsAlive()) {
-        state = GameState::Victory;
-    } else {
-        state = GameState::Defeat;
-    }
+    Map map;
+	
+	int fightState = 0;
+	system("cls");
+	FightManager fight;
+	EnemyManager enemyManager;
+
+	while (map.GetRemainingEnemy()>0)
+	{
+		map.DisplayMap();
+		map.MooveHero(); 
+
+		enemyManager.CreateEnemy();
+		Enemy enemy =  *enemyManager.GetEnemy();
+		int fightState = fight.StartFight(player, enemy);
+        system("pause");
+		if (fightState == 2) {
+			break;
+		}
+		map.GetHeroCell().RemoveEnemy();
+		map.DecrementRemainingEnemy();
+		if (map.GetRemainingEnemy() == 0) {
+			cout << "Vous avez eradique tous les enemis de la carte !" << endl;
+			cout << "Vous avez gagne la partie !" << endl;
+			break;
+		}
+	}
+    
 }
 
 
