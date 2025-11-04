@@ -9,10 +9,12 @@ class FightManager
 {
 
 public:
-	void StartFight(Player& player, Enemy& enemy);
 	FightManager() {};
-	~FightManager() {};
+
+
+	void StartFight(Player& player, Enemy& enemy);
 	void ChooseAction(Character& player, Character& enemy);
 
+	~FightManager() {};
 };
 

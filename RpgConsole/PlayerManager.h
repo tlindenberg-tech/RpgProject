@@ -12,7 +12,6 @@ public:
 	PlayerManager() {};
 	~PlayerManager() {};
 	void ChooseClass(string name);
-	void DisplayPlayerStats();
 	Player* GetPlayer();
 };
 

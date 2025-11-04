@@ -8,6 +8,7 @@ void GameManager::Initialize() {
 
 void GameManager::StartGame() {
     ShowMenu();
+    playerManager.CreatePlayer();
     Enemy enemy;
 
     while (isRunning) {
@@ -16,7 +17,8 @@ void GameManager::StartGame() {
             ShowMenu();
             break;
         case GameState::Combat:
-            //Combat();
+            Combat();
+            
             break;
         case GameState::Victory:
             std::cout << "Vous avez gagné le combat!\n";
@@ -53,25 +55,27 @@ void GameManager::ShowMenu() {
     }
 }
 
-//void GameManager::Combat() {
-//    std::cout << "\n=== Combat Commencé ===\n";
-//    Enemy enemy;
-//    std::cout << "Un " << enemy.GetName() << " apparaît!\n";
-//    while (playerManager.GetPlayer()->IsAlive() && enemy.IsAlive()) {
-//        playerManager.GetPlayer()->Attack(enemy);
-//        if (enemy.IsAlive()) {
-//            enemy.Attack(*playerManager.GetPlayer());
-//        }
-//    }
-//    if (playerManager.GetPlayer()->IsAlive()) {
-//        state = GameState::Victory;
-//    } else {
-//        state = GameState::Defeat;
-//    }
-//}
-//
-//
-//
+void GameManager::Combat() {
+    
+    Enemy enemy;
+    fightManager.StartFight(*playerManager.GetPlayer(), enemy);
+    /*std::cout << "\n=== Combat Commencé ===\n";
+    std::cout << "Un " << enemy.GetName() << " apparaît!\n";
+    while (playerManager.GetPlayer()->IsAlive() && enemy.IsAlive()) {
+        playerManager.GetPlayer()->Attack(enemy);
+        if (enemy.IsAlive()) {
+            enemy.Attack(*playerManager.GetPlayer());
+        }
+    }*/
+    if (playerManager.GetPlayer()->IsAlive()) {
+        state = GameState::Victory;
+    } else {
+        state = GameState::Defeat;
+    }
+}
+
+
+
 void GameManager::Shutdown() {
     std::cout << "\n=== Fin du jeu ===\n";
 }

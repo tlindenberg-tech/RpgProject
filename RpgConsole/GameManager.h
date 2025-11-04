@@ -6,16 +6,16 @@
 #include "FightManager.h"
 
 using namespace std;
+enum class GameState {
+    Menu,
+    Combat,
+    Victory,
+    Defeat,
+    Quit
+};
 class GameManager
 {
 private:
-    enum class GameState {
-        Menu,
-        Combat,
-        Victory,
-        Defeat,
-        Quit
-    };
     bool isRunning;
     GameState state;
 	PlayerManager playerManager;
@@ -23,7 +23,7 @@ private:
 	FightManager fightManager;
 
 public:
-    GameManager() : isRunning(false){};
+    GameManager() : isRunning(false), state(GameState::Menu){};
     ~GameManager() {};
 	void StartGame();
     void Initialize();

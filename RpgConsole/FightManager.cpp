@@ -1,5 +1,5 @@
 #include "FightManager.h"
-
+#include "GameManager.h"
 
 
 void FightManager::StartFight(Player& player, Enemy& enemy)
@@ -12,12 +12,14 @@ void FightManager::StartFight(Player& player, Enemy& enemy)
 	}
 	if (player.IsAlive() == false) {
 		cout << "Vous etes mort !";
+		
 	}
 	if (enemy.IsAlive() == false) {
 		enemy.DisplayStats();
 		cout << "Vous venez de vaincre " << enemy.GetName() << endl;
 		cout << "Vous gagnez " << enemy.GetXp() << "xp" << endl;
 		player.TakeXp(enemy.GetXp());
+		
 	}
 
 

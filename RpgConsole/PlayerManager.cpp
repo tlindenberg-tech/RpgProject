@@ -38,7 +38,3 @@ void PlayerManager::ChooseClass(string name) {
     system("pause");
     cout << "Vous entrez dans le menu principal..." << endl;
 }
-
-void PlayerManager::DisplayPlayerStats() {
-}
-

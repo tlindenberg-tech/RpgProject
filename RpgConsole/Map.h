@@ -2,17 +2,28 @@
 #include <iostream>
 #include <vector>
 #include "Cell.h"
+#include "conio.h"
+
 class Map
 {
 private:
 	vector<vector<Cell>> cells;
-	int height;
-	int width;
-public: 
+	int rowCount;
+	int colCount;
+	int rowHero;
+	int colHero;
+	int remainingEnemy;
+public:
 	Map();
 	void DisplayMap() const;
 	void Initialize();
+	void PlaceHero();
+	Cell* GetCell(int row, int col);
+	void MooveHero();
 	~Map() {};
+	void RandomEnemy();
+	static int GenerateRandomNumber(int min, int max);
+	int GetRemainingEnemy()const ;
+	Cell& GetHeroCell();
 
 };
-
