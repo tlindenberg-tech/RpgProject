@@ -66,7 +66,7 @@ void GameManager::Combat(Player& player) {
 	while (map.GetRemainingEnemy()>0)
 	{
 		map.DisplayMap();
-		map.MooveHero(); 
+		map.MoveHero(); 
 
 		enemyManager.CreateEnemy();
 		Enemy enemy =  *enemyManager.GetEnemy();
@@ -80,6 +80,7 @@ void GameManager::Combat(Player& player) {
 		if (map.GetRemainingEnemy() == 0) {
 			cout << "Vous avez eradique tous les enemis de la carte !" << endl;
 			cout << "Vous avez gagne la partie !" << endl;
+            state = GameState::Victory;
 			break;
 		}
 	}

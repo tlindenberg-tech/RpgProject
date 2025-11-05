@@ -1,5 +1,6 @@
+#include <chrono>
+#include <thread>
 #include "PlayerManager.h"
-
 void PlayerManager::CreatePlayer() {
     string name;
     cout << "Entrez le nom de votre personnage : " << endl;
@@ -13,12 +14,15 @@ Player* PlayerManager::GetPlayer() {
 
 void PlayerManager::ChooseClass(string name) {
     int chooseClass;
-    
-    cout << "Choississez votre classe : " << endl;
+    string askClass = "Choississez votre classe : \n1 Guerrier\n2 Mage ";
+    /*cout << "Choississez votre classe : " << endl;
     cout << "1 Guerrier" << endl;
-    cout << "2 Mage" << endl;
+    cout << "2 Mage" << endl;*/
+    for (char c : askClass) {
+        cout << c;
+        this_thread::sleep_for(chrono::milliseconds(10));
+    }
     cin >> chooseClass;
-
     switch (chooseClass)
     {
     case 1:

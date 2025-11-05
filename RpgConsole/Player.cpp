@@ -31,9 +31,9 @@ int Player::GetXp() const {
 
 void Player::DisplayStats() const {
 
-	cout << "Votre nom : " << GetName() << endl;
-	cout << "Mes Statistiques" << endl;
-	cout << "----------------" << endl;
+	cout << " ----------------" << endl;
+	cout << "| Mes Statistiques" << endl;
+	cout << " ----------------" << endl;
 	cout << "| Niveau : " << GetLevel() << endl;
 	cout << "| Experience : " << GetXp() << '/' << GetXpRequire() << endl;
 	cout << "| Sante : " << GetPv() << '/' << GetPvMax() << endl;

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
 #include "conio.h"
 #include "Mage.h"
 #include "Warrior.h"
@@ -9,6 +11,22 @@
 using namespace std;
 
 int main() {
+
+	//std::cout << "Message 1" << std::endl;
+	//std::this_thread::sleep_for(std::chrono::milliseconds(500)); // pause de 0.5 seconde
+
+	//std::cout << "Message 2" << std::endl;
+	//std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	//std::cout << "Message 3" << std::endl;
+	//std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+	//std::cout << "Message 4" << std::endl;
+	//string bienvenue = "Bienvenue dans ce monde";
+	//for (char c : "bienvenue salut") {
+	//	cout << c;
+	//	this_thread::sleep_for(chrono::milliseconds(10));
+	//}
 	srand(time(NULL));
 	GameManager gameManager;
 	gameManager.Initialize();

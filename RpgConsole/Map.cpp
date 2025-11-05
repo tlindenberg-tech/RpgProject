@@ -1,5 +1,5 @@
 #include "Map.h"
-
+#include "InputManager.h"
 
 Map::Map()
 {
@@ -7,7 +7,7 @@ Map::Map()
 	colCount = 8;
 	rowHero = 7;
 	colHero = 3;
-	remainingEnemy = 12;
+	remainingEnemy = 4;
 	cells = vector<vector<Cell>>(rowCount, vector<Cell>(colCount));
 	//cells[8][8];
 	cells[rowHero][colHero].PlaceHero();
@@ -40,9 +40,10 @@ Cell* Map::GetCell(int row, int col) {
 	return &cells[row][col];
 }
 
-void Map::MooveHero() {
+void Map::MoveHero() {
 	char a;
 	int b;
+	InputManager inputManager;
 	while (cells[rowHero][colHero].GetIsEnemy() == false) {
 		a = _getch();  // ignore le premier caractere qui est 224 ou Ó ??
 		//cout << a;
@@ -52,25 +53,16 @@ void Map::MooveHero() {
 
 		switch (b) {
 		case 72:    // key up
-
-			if (rowHero > 0) {
-				rowHero--;
-			}
+			inputManager.MoveUp(rowHero);
 			break;
 		case 80:    // key down
-			if (rowHero < colCount-1) {
-				rowHero++;
-			}
+			inputManager.MoveDown(rowHero, rowCount);
 			break;
 		case 77:    // key right
-			if (colHero < rowCount-1) {
-				colHero++;
-			}
+			inputManager.MoveRight(colHero, colCount);
 			break;
 		case 75:    // key left
-			if (colHero > 0) {
-				colHero--;
-			}
+			inputManager.MoveLeft(colHero);
 			break;
 		}
 		cells[rowHero][colHero].PlaceHero();
@@ -93,9 +85,8 @@ int Map::GenerateRandomNumber(int min, int max) {
 
 void Map::RandomEnemy() {
 	int placedEnemy = 0;
-	int totalEnemy = 12;
 
-	while (placedEnemy < totalEnemy) {
+	while (placedEnemy < remainingEnemy) {
 		int row = GenerateRandomNumber(0, rowCount);
 		int col = GenerateRandomNumber(0, colCount);
 
