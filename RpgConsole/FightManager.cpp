@@ -1,24 +1,30 @@
 #include "FightManager.h"
 #include "GameManager.h"
-
+#include "Utils.h"
 
 int FightManager::StartFight(Player& player, Enemy& enemy)
 {
 	system("cls");
 
-	cout << "Le combat commence entre " << player.GetName() << " et " << enemy.GetName() << "!" << endl;
+	string start ="Le combat commence entre " + player.GetName() + " et " + enemy.GetName() + "!\n";
+	DisplayTime(start);
+	//cout << "Le combat commence entre " << player.GetName() << " et " << enemy.GetName() << "!" << endl;
 	system("pause");
 	while (player.IsAlive() && enemy.IsAlive()) {
 		ChooseAction(player, enemy);
 	}
 	if (player.IsAlive() == false) {
-		cout << "Vous etes mort !";
+		DisplayTime("Vous etes mort !");
 		return 2;
 	}
 	if (enemy.IsAlive() == false) {
 		enemy.DisplayStats();
-		cout << "Vous venez de vaincre " << enemy.GetName() << endl;
-		cout << "Vous gagnez " << enemy.GetXp() << "xp" << endl;
+
+		string win = "Vous venez de vaincre " + enemy.GetName() + "\n"
+			"Vous gagnez " + to_string(enemy.GetXp()) + "xp\n";
+		DisplayTime(win);
+		/*cout << "Vous venez de vaincre " << enemy.GetName() << endl;
+		cout << "Vous gagnez " << enemy.GetXp() << "xp" << endl;*/
 		player.TakeXp(enemy.GetXp());
 		return 1;
 	}
@@ -55,7 +61,9 @@ void FightManager::ChooseAction(Character& player, Character& enemy) {
 	{
 	case 1:
 		player.Attack(enemy);
-		enemy.Attack(player);
+		if (enemy.IsAlive()) {
+			enemy.Attack(player);
+		}
 		break;
 	case 2:
 		if (player.GetPv() < player.GetPvMax()) {
@@ -67,3 +75,4 @@ void FightManager::ChooseAction(Character& player, Character& enemy) {
 		break;
 	}
 }
+

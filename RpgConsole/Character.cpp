@@ -3,7 +3,7 @@
 void Character::DisplayStats() const
 {
 	cout << "----------------" << endl;
-	cout << "|Name: " << name << endl;
+	cout << "|" << name << endl;
 	cout << "|PV: " << pv << "/" << pvMax << endl;
 	cout << "|Damage: " << damage << endl;
 	cout << "----------------" << endl;

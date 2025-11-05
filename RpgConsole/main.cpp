@@ -7,10 +7,15 @@
 #include "GameManager.h"
 #include "Map.h"
 #include "EnemyManager.h"
+#include "Character.h"
 
 using namespace std;
 
 int main() {
+
+	/*Player perso("bob", 100, 100, 5);
+	perso.DisplayStats();*/
+
 
 	//std::cout << "Message 1" << std::endl;
 	//std::this_thread::sleep_for(std::chrono::milliseconds(500)); // pause de 0.5 seconde
@@ -27,11 +32,18 @@ int main() {
 	//	cout << c;
 	//	this_thread::sleep_for(chrono::milliseconds(10));
 	//}
+
+
+
 	srand(time(NULL));
 	GameManager gameManager;
 	gameManager.Initialize();
 	gameManager.StartGame();
 	
+
+
+
+
 	/*char c;
 	while (true) {
 		c = _getch();
@@ -74,3 +86,4 @@ int main() {
 
 	return 0;
 }
+

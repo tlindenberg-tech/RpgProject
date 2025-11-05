@@ -16,12 +16,12 @@ Map::Map()
 }
 
 void Map::DisplayMap() const {
-	
+	system("cls");
 	for (int row = 0; row < rowCount; row++) {
 		
 		for (int col = 0; col < colCount; col++) {
-
 			cout << "[" << cells[row][col].getSymboll() << "]";
+
 		}
 
 		cout << "\n";

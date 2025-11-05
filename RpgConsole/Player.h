@@ -1,4 +1,5 @@
 #pragma once
+#include "Utils.h"
 #include "Character.h"
 class Player :
     public Character

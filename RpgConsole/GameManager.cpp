@@ -25,7 +25,7 @@ void GameManager::StartGame() {
             break;
         case GameState::Defeat:
             std::cout << "Vous avez perdu le combat...\n";
-            isRunning = false;
+            state = GameState::Menu;
             break;
         case GameState::Quit:
             isRunning = false;
@@ -59,7 +59,6 @@ void GameManager::Combat(Player& player) {
     Map map;
 	
 	int fightState = 0;
-	system("cls");
 	FightManager fight;
 	EnemyManager enemyManager;
 
@@ -73,6 +72,7 @@ void GameManager::Combat(Player& player) {
 		int fightState = fight.StartFight(player, enemy);
         system("pause");
 		if (fightState == 2) {
+            state = GameState::Defeat;
 			break;
 		}
 		map.GetHeroCell().RemoveEnemy();

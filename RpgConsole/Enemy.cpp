@@ -1,6 +1,8 @@
 #include "Enemy.h"
+#include "Utils.h"
 void Enemy::Attack(Character& c) {
-	cout << "Le Gobelin attaque" << endl;
+	string att = "Le Gobelin attaque et vous inflige " + to_string(GetDamage()) + " degats\n";
+	DisplayTime(att);
 	TakeDamage(c.GetDamage());
 }
 

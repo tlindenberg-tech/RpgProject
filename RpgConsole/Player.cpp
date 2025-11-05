@@ -40,3 +40,4 @@ void Player::DisplayStats() const {
 	cout << "| Attaque : " << GetDamage() << endl;
 	cout << "----------------" << endl;
 }
+

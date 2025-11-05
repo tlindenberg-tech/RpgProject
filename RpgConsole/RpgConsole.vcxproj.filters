@@ -31,6 +31,12 @@
     <Filter Include="Fichiers sources\Map">
       <UniqueIdentifier>{c7325d82-b619-40a3-b429-c9d13f81b32f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Item">
+      <UniqueIdentifier>{b60e018b-55b4-40c3-9255-d0ee88cca465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Item">
+      <UniqueIdentifier>{1f4246aa-c7b6-4ac7-8d18-e079e94d1e80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -70,6 +76,15 @@
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Inventory.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Fichiers d%27en-tête\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion.h">
+      <Filter>Fichiers d%27en-tête\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -114,6 +129,15 @@
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Inventory.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Fichiers sources\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Potion.cpp">
+      <Filter>Fichiers sources\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
