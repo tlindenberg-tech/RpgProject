@@ -5,9 +5,18 @@ void PlayerManager::CreatePlayer() {
     system("cls");
     string name;
     cout << "Entrez le nom de votre personnage : " << endl;
-    cin >> name;
     
+    cin >> name;
+
 	ChooseClass(name);
+}
+
+void PlayerManager::CreateInventory(){
+    player->GetInventory().AddItem(std::make_unique<Potion>("Potion de soin", 20, 1, 12));
+    player->GetInventory().AddItem(std::make_unique<Potion>("Potion de heal", 15, 2, 13));
+    player->GetInventory().AddItem(std::make_unique<Potion>("Potion de feu", 40, 3, 15));
+    player->GetInventory().AddItem(std::make_unique<Potion>("Potion de glace", 50, 4, 20));
+    player->GetInventory().AddItem(std::make_unique<Potion>("Potion de sang", 100, 5, 30));
 }
 
 Player* PlayerManager::GetPlayer() {
@@ -36,11 +45,13 @@ void PlayerManager::ChooseClass(string name) {
             case 1:
                 cout << "Vous avez choisi la classe Guerrier." << endl;
                 player = make_unique<Warrior>(name);
+				CreateInventory();
                 player->DisplayStats();
                 break;
             case 2:
                 cout << "Vous avez choisi la classe Mage." << endl;
                 player = make_unique<Mage>(name);
+				CreateInventory();
                 player->DisplayStats();
                 break;
             default:

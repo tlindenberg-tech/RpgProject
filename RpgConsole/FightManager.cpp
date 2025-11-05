@@ -1,7 +1,7 @@
 #include "FightManager.h"
 #include "GameManager.h"
 #include "Utils.h"
-
+#include <conio.h>
 int FightManager::StartFight(Player& player, Enemy& enemy)
 {
 	system("cls");
@@ -34,7 +34,7 @@ int FightManager::StartFight(Player& player, Enemy& enemy)
 	return 0;
 }
 
-void FightManager::ChooseAction(Character& player, Character& enemy) {
+void FightManager::ChooseAction(Player& player, Enemy& enemy) {
 	
 	player.DisplayStats();
 	enemy.DisplayStats();
@@ -43,35 +43,45 @@ void FightManager::ChooseAction(Character& player, Character& enemy) {
 	int row = 0, col = 0;
 
 
-	do {
+	
+	while (choice < 49 || choice > 51) {
+
 		cout << " ----------------------------" << endl;
 		cout << "|Choisissez l action :       |" << endl;
 		cout << "|1. Attaquer " << enemy.GetName() << "       | " << endl;
+		cout << "|2. Voir mon inventaire      | " << endl;
 		if (player.GetPv() < player.GetPvMax()) {
-			cout << "|2. Regenerer 10pv           | " << endl;
+			cout << "|3. Regenerer 10pv           | " << endl;
 		}
 		cout << " ----------------------------" << endl;
 		cout << "Mon choix : ";
-		cin >> choice;
 
-	} while (choice < 1 || choice > 2);
 
-	system("cls");
+		choice = _getch();
+		system("cls");
+	}
+
 	switch (choice)
 	{
-	case 1:
+	case 49:
 		player.Attack(enemy);
 		if (enemy.IsAlive()) {
 			enemy.Attack(player);
 		}
 		break;
-	case 2:
+	case 50:
+		player.GetInventory().DisplayInventory();
+
+		system("pause");
+		break;
+	case 51:
 		if (player.GetPv() < player.GetPvMax()) {
 			player.Heal(10);
 		}
 		break;
 	default:
 		cout << "Choix non proposé";
+
 		break;
 	}
 }

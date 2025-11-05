@@ -43,3 +43,4 @@ void Character::Attack(Character& c) {
 	cout << "Le Personnage attaque" << endl;
 	TakeDamage(c.GetDamage());
 }
+

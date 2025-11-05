@@ -33,3 +33,10 @@ void Cell::RemoveEnemy() {
 	isEnemy = false;
 	
 }
+
+bool Cell::isEvent() {
+	if (GetIsEnemy()) {
+		return true;
+	}
+	return false;
+}

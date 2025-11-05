@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-
+#include <vector>
+#include "Potion.h"
 using namespace std;
 class Character
 {

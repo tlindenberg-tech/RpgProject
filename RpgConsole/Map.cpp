@@ -40,11 +40,11 @@ Cell* Map::GetCell(int row, int col) {
 	return &cells[row][col];
 }
 
-void Map::MoveHero() {
+void Map::ActionHero() {
 	char a;
 	int b;
 	InputManager inputManager;
-	while (cells[rowHero][colHero].GetIsEnemy() == false) {
+	while (cells[rowHero][colHero].isEvent() == false) {
 		a = _getch();  // ignore le premier caractere qui est 224 ou Ó ??
 		//cout << a;
 

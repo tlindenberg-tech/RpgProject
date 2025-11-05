@@ -65,7 +65,7 @@ void GameManager::Combat(Player& player) {
 	while (map.GetRemainingEnemy()>0)
 	{
 		map.DisplayMap();
-		map.MoveHero(); 
+		map.ActionHero(); 
 
 		enemyManager.CreateEnemy();
 		Enemy enemy =  *enemyManager.GetEnemy();

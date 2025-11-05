@@ -4,15 +4,20 @@ void Player::LevelUp() {
 	lvl++;
 	exp -= expRequire;
 	expRequire *= 1.2;
-	damage *= 1.2;
+	pvMax *= 1.1;
+	pv = pvMax;
+	damage *= 1.1;
 	cout << "Vous augmentez d'un niveau." << endl;
 	cout << "Vous etes maintenant niveau " << lvl << endl << endl;
 }
 
 void Player::TakeXp(int xpEnemy) {
 	exp += xpEnemy;
+
 	if (exp > expRequire) {
-		LevelUp();
+		while (exp > expRequire) {
+			LevelUp();
+		}
 	}
 
 }
@@ -29,11 +34,16 @@ int Player::GetXp() const {
 	return exp;
 }
 
+Inventory& Player::GetInventory() {
+	return inventory;
+}
+
 void Player::DisplayStats() const {
 
 	cout << " ----------------" << endl;
 	cout << "| Mes Statistiques" << endl;
 	cout << " ----------------" << endl;
+	cout << "| Nom : " << GetName() << endl;
 	cout << "| Niveau : " << GetLevel() << endl;
 	cout << "| Experience : " << GetXp() << '/' << GetXpRequire() << endl;
 	cout << "| Sante : " << GetPv() << '/' << GetPvMax() << endl;

@@ -31,10 +31,16 @@
     <Filter Include="Fichiers sources\Map">
       <UniqueIdentifier>{c7325d82-b619-40a3-b429-c9d13f81b32f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Item">
+    <Filter Include="Fichiers d%27en-tête\Inventory">
+      <UniqueIdentifier>{2e7acff6-d5f5-446f-b834-cbe1d0cc9b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Inventory\Item">
       <UniqueIdentifier>{b60e018b-55b4-40c3-9255-d0ee88cca465}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Item">
+    <Filter Include="Fichiers sources\Inventory">
+      <UniqueIdentifier>{43a8664a-7582-48ba-924c-879e8113c043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Inventory\Item">
       <UniqueIdentifier>{1f4246aa-c7b6-4ac7-8d18-e079e94d1e80}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -75,17 +81,17 @@
     <ClInclude Include="PlayerManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>Fichiers d%27en-tête\Item</Filter>
+      <Filter>Fichiers d%27en-tête\Inventory\Item</Filter>
     </ClInclude>
     <ClInclude Include="Potion.h">
-      <Filter>Fichiers d%27en-tête\Item</Filter>
+      <Filter>Fichiers d%27en-tête\Inventory\Item</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Fichiers d%27en-tête\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -128,17 +134,17 @@
     <ClCompile Include="PlayerManager.cpp">
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>Fichiers sources\Item</Filter>
+      <Filter>Fichiers sources\Inventory\Item</Filter>
     </ClCompile>
     <ClCompile Include="Potion.cpp">
-      <Filter>Fichiers sources\Item</Filter>
+      <Filter>Fichiers sources\Inventory\Item</Filter>
     </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Fichiers sources\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

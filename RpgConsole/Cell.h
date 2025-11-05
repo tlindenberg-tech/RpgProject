@@ -19,6 +19,8 @@ public:
 	bool GetIsEnemy() const;
 	void PlaceEnemy();
 	void RemoveEnemy();
+	bool isEvent();
+
 };
 
 

@@ -2,36 +2,28 @@
 #include <chrono>
 #include <thread>
 #include "conio.h"
-#include "Mage.h"
-#include "Warrior.h"
-#include "GameManager.h"
-#include "Map.h"
-#include "EnemyManager.h"
-#include "Character.h"
 
+#include "GameManager.h"
+#include "Inventory.h"
 using namespace std;
 
 int main() {
 
+	
+	
+	
+
+	// ENTRER = 13
+
+	/*int input = _getch();
+	cout << input;*/
+
+	/*Item item("potion soin", 8, 12, 1);
+	item.Display();*/
+
+
 	/*Player perso("bob", 100, 100, 5);
 	perso.DisplayStats();*/
-
-
-	//std::cout << "Message 1" << std::endl;
-	//std::this_thread::sleep_for(std::chrono::milliseconds(500)); // pause de 0.5 seconde
-
-	//std::cout << "Message 2" << std::endl;
-	//std::this_thread::sleep_for(std::chrono::seconds(1));
-
-	//std::cout << "Message 3" << std::endl;
-	//std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
-	//std::cout << "Message 4" << std::endl;
-	//string bienvenue = "Bienvenue dans ce monde";
-	//for (char c : "bienvenue salut") {
-	//	cout << c;
-	//	this_thread::sleep_for(chrono::milliseconds(10));
-	//}
 
 
 

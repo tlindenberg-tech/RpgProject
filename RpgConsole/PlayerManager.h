@@ -13,5 +13,7 @@ public:
 	~PlayerManager() {};
 	void ChooseClass(string name);
 	Player* GetPlayer();
+	void CreateInventory();
+
 };
 

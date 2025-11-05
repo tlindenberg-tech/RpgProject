@@ -19,7 +19,7 @@ public:
 	void Initialize();
 	void PlaceHero();
 	Cell* GetCell(int row, int col);
-	void MoveHero();
+	void ActionHero();
 	~Map() {};
 	void RandomEnemy();
 	static int GenerateRandomNumber(int min, int max);
