@@ -9,9 +9,8 @@
 using namespace std;
 
 int main() {
-	/*int input = _getch();
-	cout << input;*/
-	
+	GetAscii();
+
 	//PlayerManager marchandManager;
 	//marchandManager.InitializeMarchand();
 	//marchandManager.GetPlayer()->DisplayStats();
@@ -47,6 +46,31 @@ int main() {
 		std::cout << "Action annulee." << std::endl;
 		return;
 	}*/
+
+
+	/*string attack = "    ./~\n"
+						"(= @@@@@@@ = [}================ = --\n"
+						"    `\\_ \n";
+	cout << attack;
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	system("cls");
+	string attack2 = "        ./~\n"
+		"    (= @@@@@@@ = [}================ = --\n"
+		"        `\\_ \n";
+	cout << attack2;
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	system("cls");
+	string attack3 = "            ./~\n"
+		"        (= @@@@@@@ = [}================ = --\n"
+		"            `\\_ \n";
+	cout<< attack3;
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	system("cls");
+	string attack4 = "                ./~\n"
+		"            (= @@@@@@@ = [}================ = --\n"
+		"                `\\_ \n";
+	cout << attack4;*/
+
 
 	srand(time(NULL));
 	GameManager gameManager;

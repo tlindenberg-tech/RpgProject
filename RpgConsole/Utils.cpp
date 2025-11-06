@@ -1,5 +1,5 @@
 #include "Utils.h"
-
+#include <conio.h>
 
 void DisplayTime(string chaine) {
 
@@ -7,6 +7,11 @@ void DisplayTime(string chaine) {
 		cout << c;
 		this_thread::sleep_for(chrono::milliseconds(10));
 	}
+}
+
+void GetAscii() {
+	int input = _getch();
+	cout << input;
 }
 
 //void CenterRow(int size) {

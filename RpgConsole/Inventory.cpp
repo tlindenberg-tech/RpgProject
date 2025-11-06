@@ -1,11 +1,18 @@
 #include "Inventory.h"
-
+#include <conio.h>
 void Inventory::DisplayInventory()const  {
 	cout << "----- Inventaire -----" << endl;
 	cout << "| Vous avez " << items.size() << " objets dans votre inventaire." << endl;
 	for (int i = 0; i< items.size(); i++) {
 		items[i]->Display(i+1);
 	}
+	//int choice;
+	//choice  = _getch();
+	//switch (choice) {
+	//	case 49: // '1'
+	//		items[0]->Use();
+	//		break;
+	//}
 }
 
 

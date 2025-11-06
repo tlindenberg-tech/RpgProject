@@ -8,6 +8,7 @@
 using namespace std;
 enum class GameState {
     Menu,
+    Commands,
     Combat,
     Victory,
     Defeat,
@@ -21,6 +22,7 @@ private:
 	PlayerManager playerManager;
 	EnemyManager enemyManager;
 	FightManager fightManager;
+	MarchandManager marchandManager;
 
 public:
     GameManager() : isRunning(false), state(GameState::Menu){};

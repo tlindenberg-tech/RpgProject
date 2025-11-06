@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include "Cell.h"
 #include "conio.h"
-
+#include "Cell.h"
+#include "PlayerManager.h"
 class Map
 {
 private:
@@ -19,7 +19,7 @@ public:
 	void Initialize();
 	void PlaceHero();
 	Cell* GetCell(int row, int col);
-	int ActionHero();
+	int ActionHero(PlayerManager& playerManager);
 	~Map() {};
 	void RandomEnemy();
 	static int GenerateRandomNumber(int min, int max);
@@ -27,4 +27,5 @@ public:
 	Cell& GetHeroCell();
 	void DecrementRemainingEnemy();
 	void QuitShop();
+
 };

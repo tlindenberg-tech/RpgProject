@@ -48,15 +48,20 @@ void Map::QuitShop() {
 	cells[rowHero][colHero].PlaceHero();
 }
 
-int Map::ActionHero() {
+int Map::ActionHero(PlayerManager& playerManager) {
 	char a;
 	int b;
 	InputManager inputManager;
+	int exitChoice = 0;
 	while (cells[rowHero][colHero].isEvent() == 0) {
 		a = _getch();  // ignore le premier caractere qui est 224 ou Ó ??
 		//cout << a;
-
-		b = _getch();
+		if (a == 224) {
+			b = _getch();
+		}
+		else {
+			b = a;
+		}
 		cells[rowHero][colHero].RemoveHero();
 
 		switch (b) {
@@ -71,6 +76,21 @@ int Map::ActionHero() {
 			break;
 		case 75:    // key left
 			inputManager.MoveLeft(colHero);
+			break;
+		case 105:    // key left
+			playerManager.GetPlayer()->GetInventory().DisplayInventory();
+
+			cout << "Appuyez sur Entrer sortir" << endl;
+			exitChoice = _getch();
+			while(exitChoice != 13) {
+				exitChoice = _getch();
+			}
+			if(exitChoice == 13) {
+				system("cls");
+			}
+			break;
+		case 112:    // key p
+			playerManager.GetPlayer()->DisplayStats();
 			break;
 		}
 		cells[rowHero][colHero].PlaceHero();

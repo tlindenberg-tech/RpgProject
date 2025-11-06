@@ -43,17 +43,15 @@ void FightManager::ChooseAction(Player& player, Enemy& enemy) {
 
 	int choice = 0;
 	int row = 0, col = 0;
-
-
 	
 	while (choice < 49 || choice > 51) {
 
 		cout << " ----------------------------" << endl;
-		cout << "|Choisissez l action :       |" << endl;
-		cout << "|1. Attaquer " << enemy.GetName() << "       | " << endl;
-		cout << "|2. Voir mon inventaire      | " << endl;
+		cout << "|Choisissez l action :" << endl;
+		cout << "|1. Attaquer " << enemy.GetName() << endl;
+		cout << "|2. Voir mon inventaire       " << endl;
 		if (player.GetPv() < player.GetPvMax()) {
-			cout << "|3. Regenerer 10pv           | " << endl;
+			cout << "|3. Utiliser une potion " << endl;
 		}
 		cout << " ----------------------------" << endl;
 		cout << "Mon choix : ";

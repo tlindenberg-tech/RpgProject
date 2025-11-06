@@ -19,3 +19,4 @@ void MarchandManager::CreateShopInventory() {
 Marchand* MarchandManager::GetMarchand() {
 	return marchand.get();
 }
+
