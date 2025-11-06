@@ -10,6 +10,7 @@ Map::Map()
 	remainingEnemy = 4;
 	cells = vector<vector<Cell>>(rowCount, vector<Cell>(colCount));
 	//cells[8][8];
+	cells[0][3].PlaceMarchand();
 	cells[rowHero][colHero].PlaceHero();
 	RandomEnemy();
 
@@ -26,6 +27,7 @@ void Map::DisplayMap() const {
 
 		cout << "\n";
 	}
+
 }
 
 
@@ -40,11 +42,17 @@ Cell* Map::GetCell(int row, int col) {
 	return &cells[row][col];
 }
 
-void Map::ActionHero() {
+void Map::QuitShop() {
+	cells[rowHero][colHero].RemoveHero();
+	rowHero++;
+	cells[rowHero][colHero].PlaceHero();
+}
+
+int Map::ActionHero() {
 	char a;
 	int b;
 	InputManager inputManager;
-	while (cells[rowHero][colHero].isEvent() == false) {
+	while (cells[rowHero][colHero].isEvent() == 0) {
 		a = _getch();  // ignore le premier caractere qui est 224 ou Ó ??
 		//cout << a;
 
@@ -69,6 +77,7 @@ void Map::ActionHero() {
 		system("cls");
 		DisplayMap();
 	}
+	return cells[rowHero][colHero].isEvent();
 }
 
 int Map::GetRemainingEnemy()const  {
@@ -96,8 +105,12 @@ void Map::RandomEnemy() {
 				if (row == rowHero + j && col == colHero + k) {
 					isSafeZone = true;
 				}
+				if (row == 0 + j && col == 3 + k) {
+					isSafeZone = true;
+				}
 			}
 		}
+		
 
 		if (isSafeZone) {
 			continue;

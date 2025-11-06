@@ -9,16 +9,16 @@ void DisplayTime(string chaine) {
 	}
 }
 
-void CenterRow(int size) {
-	for (int i = 0; i < size; i++)
-	{
-		cout << " ";
-	}
-};
-
-void CenterCol(int size) {
-	for (int i = 0; i < size; i++)
-	{
-		cout << "\n"; //25 pour au milieu
-	}
-};
+//void CenterRow(int size) {
+//	for (int i = 0; i < size; i++)
+//	{
+//		cout << " ";
+//	}
+//};
+//
+//void CenterCol(int size) {
+//	for (int i = 0; i < size; i++)
+//	{
+//		cout << "\n"; //25 pour au milieu
+//	}
+//};

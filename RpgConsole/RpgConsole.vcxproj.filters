@@ -81,9 +81,6 @@
     <ClInclude Include="PlayerManager.h">
       <Filter>Fichiers d%27en-tête\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Fichiers d%27en-tête\Inventory\Item</Filter>
-    </ClInclude>
     <ClInclude Include="Potion.h">
       <Filter>Fichiers d%27en-tête\Inventory\Item</Filter>
     </ClInclude>
@@ -92,6 +89,12 @@
     </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>Fichiers d%27en-tête\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="MarchandManager.h">
+      <Filter>Fichiers d%27en-tête\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Marchand.h">
+      <Filter>Fichiers d%27en-tête\Character</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -134,9 +137,6 @@
     <ClCompile Include="PlayerManager.cpp">
       <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Fichiers sources\Inventory\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Potion.cpp">
       <Filter>Fichiers sources\Inventory\Item</Filter>
     </ClCompile>
@@ -145,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="Inventory.cpp">
       <Filter>Fichiers sources\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Marchand.cpp">
+      <Filter>Fichiers sources\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="MarchandManager.cpp">
+      <Filter>Fichiers sources\Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

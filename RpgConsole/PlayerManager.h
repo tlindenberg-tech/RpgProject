@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Warrior.h"
 #include "Mage.h"
+#include "MarchandManager.h"
+
 using namespace std;
 class PlayerManager
 {
@@ -13,7 +15,9 @@ public:
 	~PlayerManager() {};
 	void ChooseClass(string name);
 	Player* GetPlayer();
-	void CreateInventory();
+	void InitializeMarchand();
+	int Shop();
+	void BuyPotion(Marchand* marchand);
 
 };
 

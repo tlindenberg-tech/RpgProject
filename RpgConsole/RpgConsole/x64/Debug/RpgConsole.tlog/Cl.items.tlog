@@ -4,10 +4,11 @@ C:\Users\linde\source\repos\RpgProject\RpgConsole\EnemyManager.cpp;C:\Users\lind
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Enemy.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Enemy.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\GameManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\GameManager.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Inventory.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Inventory.obj
-C:\Users\linde\source\repos\RpgProject\RpgConsole\Item.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Item.obj
+C:\Users\linde\source\repos\RpgProject\RpgConsole\Marchand.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Marchand.obj
+C:\Users\linde\source\repos\RpgProject\RpgConsole\MarchandManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\MarchandManager.obj
+C:\Users\linde\source\repos\RpgProject\RpgConsole\Potion.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Potion.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Mage.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Mage.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\PlayerManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\PlayerManager.obj
-C:\Users\linde\source\repos\RpgProject\RpgConsole\Potion.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Potion.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Utils.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Utils.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\Warrior.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\Warrior.obj
 C:\Users\linde\source\repos\RpgProject\RpgConsole\InputManager.cpp;C:\Users\linde\source\repos\RpgProject\RpgConsole\RpgConsole\x64\Debug\InputManager.obj

@@ -8,18 +8,20 @@ class Cell
 private:
 	bool isEnemy;
 	bool isHero;
+	bool isMarchand;
 
 public:
-	Cell() : isEnemy(false), isHero(false) {};
+	Cell() : isEnemy(false), isHero(false), isMarchand(false) {};
 	~Cell() {};
-
+	void PlaceMarchand();
 	char getSymboll() const ;
 	void PlaceHero();
 	void RemoveHero();
 	bool GetIsEnemy() const;
 	void PlaceEnemy();
 	void RemoveEnemy();
-	bool isEvent();
+	int isEvent() const;
+	bool GetMarchand() const;
 
 };
 

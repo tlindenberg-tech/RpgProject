@@ -19,12 +19,12 @@ public:
 	void Initialize();
 	void PlaceHero();
 	Cell* GetCell(int row, int col);
-	void ActionHero();
+	int ActionHero();
 	~Map() {};
 	void RandomEnemy();
 	static int GenerateRandomNumber(int min, int max);
 	int GetRemainingEnemy()const ;
 	Cell& GetHeroCell();
 	void DecrementRemainingEnemy();
-
+	void QuitShop();
 };

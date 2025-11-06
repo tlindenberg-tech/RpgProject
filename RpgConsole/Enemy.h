@@ -9,7 +9,7 @@ private :
 public:
 	Enemy() ;
 	Enemy(string name, int pv, int pvMax, int damage, int xp) : Character(name, pv, pvMax, damage), xp(xp) {};
-	void Attack(Character& c) override;
+	virtual void Attack(Character& c) override;
 	~Enemy() override {};
 	int GetXp() const;
 };

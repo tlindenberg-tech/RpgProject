@@ -26,6 +26,7 @@ int FightManager::StartFight(Player& player, Enemy& enemy)
 		/*cout << "Vous venez de vaincre " << enemy.GetName() << endl;
 		cout << "Vous gagnez " << enemy.GetXp() << "xp" << endl;*/
 		player.TakeXp(enemy.GetXp());
+		player.AddMoney(enemy.GetXp() / 10);
 		return 1;
 	}
 
@@ -33,6 +34,7 @@ int FightManager::StartFight(Player& player, Enemy& enemy)
 	player.DisplayStats();
 	return 0;
 }
+
 
 void FightManager::ChooseAction(Player& player, Enemy& enemy) {
 	
@@ -76,7 +78,7 @@ void FightManager::ChooseAction(Player& player, Enemy& enemy) {
 		break;
 	case 51:
 		if (player.GetPv() < player.GetPvMax()) {
-			player.Heal(10);
+			player.ChooseItem();
 		}
 		break;
 	default:

@@ -65,26 +65,40 @@ void GameManager::Combat(Player& player) {
 	while (map.GetRemainingEnemy()>0)
 	{
 		map.DisplayMap();
-		map.ActionHero(); 
+		int action = map.ActionHero(); 
 
-		enemyManager.CreateEnemy();
-		Enemy enemy =  *enemyManager.GetEnemy();
-		int fightState = fight.StartFight(player, enemy);
-        system("pause");
-		if (fightState == 2) {
-            state = GameState::Defeat;
-			break;
+
+        if (action == 1) {
+            enemyManager.CreateEnemy();
+            Enemy enemy = *enemyManager.GetEnemy();
+            int fightState = fight.StartFight(player, enemy);
+            system("pause");
+            if (fightState == 2) {
+                state = GameState::Defeat;
+                break;
+            }
+            map.GetHeroCell().RemoveEnemy();
+            map.DecrementRemainingEnemy();
+            
+        } else if (action == 2) {
+            system("cls");
+            int attShop = playerManager.Shop();
+
+            if (attShop == 1) {
+				playerManager.BuyPotion(*playerManager.GetPlayer());
+            }
+
+			map.QuitShop();
+            continue;
 		}
-		map.GetHeroCell().RemoveEnemy();
-		map.DecrementRemainingEnemy();
+
 		if (map.GetRemainingEnemy() == 0) {
-			cout << "Vous avez eradique tous les enemis de la carte !" << endl;
-			cout << "Vous avez gagne la partie !" << endl;
+            cout << "Vous avez eradique tous les enemis de la carte !" << endl;
+            cout << "Vous avez gagne la partie !" << endl;
             state = GameState::Victory;
-			break;
-		}
+            break;
+        }
 	}
-    
 }
 
 

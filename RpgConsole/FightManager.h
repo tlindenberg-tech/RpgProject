@@ -14,7 +14,7 @@ public:
 
 	int StartFight(Player& player, Enemy& enemy);
 	void ChooseAction(Player& player, Enemy& enemy);
-
 	~FightManager() {};
 };
+
 

@@ -19,6 +19,9 @@ int Character::GetPv() const{
 
 void Character::Heal(int heal) {
 	pv += heal;
+	if (pv > pvMax) {
+		pv = pvMax;
+	}
 }
 
 bool Character::IsAlive() const {
@@ -41,6 +44,6 @@ void Character::TakeDamage(int damage)  {
 
 void Character::Attack(Character& c) {
 	cout << "Le Personnage attaque" << endl;
-	TakeDamage(c.GetDamage());
+	c.TakeDamage(GetDamage());
 }
 

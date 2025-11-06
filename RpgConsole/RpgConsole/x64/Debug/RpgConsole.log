@@ -1,2 +1,9 @@
 ﻿  FightManager.cpp
+  GameManager.cpp
+  Marchand.cpp
+C:\Users\linde\source\repos\RpgProject\RpgConsole\Marchand.cpp(24,30): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  main.cpp
+C:\Users\linde\source\repos\RpgProject\RpgConsole\main.cpp(51,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+C:\Users\linde\source\repos\RpgProject\RpgConsole\Marchand.cpp(33,1): warning C4715: 'Marchand::GetShopItem' : les chemins de contrôle ne retournent pas tous une valeur
   RpgConsole.vcxproj -> C:\Users\linde\source\repos\RpgProject\RpgConsole\x64\Debug\RpgConsole.exe

@@ -5,27 +5,48 @@
 
 #include "GameManager.h"
 #include "Inventory.h"
+#include "MarchandManager.h"
 using namespace std;
 
 int main() {
-
-	
-	
-	
-
-	// ENTRER = 13
-
 	/*int input = _getch();
 	cout << input;*/
+	
+	//PlayerManager marchandManager;
+	//marchandManager.InitializeMarchand();
+	//marchandManager.GetPlayer()->DisplayStats();
 
-	/*Item item("potion soin", 8, 12, 1);
-	item.Display();*/
+	//marchandManager.GetPlayer()->ChooseItem();
+
+
+
+	//PlayerManager playerManager;
+	//playerManager.CreatePlayer();
+	//playerManager.GetPlayer()->DisplayStats();
+	////playerManager.GetPlayer()->ChooseItem();
+
+	//playerManager.Shop();
+
+
+	//cout << "\n\nVoici votre inventaire : \n" << endl;
+	//playerManager.GetPlayer()->GetInventory().DisplayInventory();
+	//playerManager.GetPlayer()->ChooseItem();
+	// ENTRER = 13
+
+	
 
 
 	/*Player perso("bob", 100, 100, 5);
 	perso.DisplayStats();*/
 
-
+	/*char confirm;
+	std::cout << "Etes-vous sur de vouloir utiliser cet objet ? (y/n) : ";
+	confirm = _getch();
+	std::cout << confirm << std::endl;
+	if (confirm != 'y' && confirm != 'Y') {
+		std::cout << "Action annulee." << std::endl;
+		return;
+	}*/
 
 	srand(time(NULL));
 	GameManager gameManager;

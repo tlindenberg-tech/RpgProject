@@ -7,6 +7,9 @@ char Cell::getSymboll() const {
 	if (isEnemy) {
 		return 'E';
 	}
+	if (isMarchand) {
+		return 'M';
+	}
 	if (isHero) {
 		return 'H';
 	}
@@ -19,6 +22,10 @@ void Cell::PlaceHero() {
 void Cell::RemoveHero() {
 	isHero = false;
 	
+}
+
+void Cell::PlaceMarchand() {
+	isMarchand = true;
 }
 
 bool Cell::GetIsEnemy() const {
@@ -34,9 +41,16 @@ void Cell::RemoveEnemy() {
 	
 }
 
-bool Cell::isEvent() {
+bool Cell::GetMarchand() const {
+	return isMarchand;
+}
+
+int Cell::isEvent() const {
 	if (GetIsEnemy()) {
-		return true;
+		return 1;
 	}
-	return false;
+	if (GetMarchand()) {
+		return 2;
+	}
+	return 0;
 }

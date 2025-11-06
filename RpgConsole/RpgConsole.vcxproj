@@ -129,10 +129,11 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Item.h" />
+    <ClInclude Include="Marchand.h" />
+    <ClInclude Include="MarchandManager.h" />
+    <ClInclude Include="Potion.h" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="PlayerManager.h" />
-    <ClInclude Include="Potion.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="InputManager.h" />
@@ -147,10 +148,11 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Marchand.cpp" />
+    <ClCompile Include="MarchandManager.cpp" />
+    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
-    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="InputManager.cpp" />
